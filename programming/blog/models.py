@@ -10,6 +10,7 @@ def lnglat_validator(value):
 
 
 class Post(models.Model):
+    author = models.CharField(max_length=20)
     title = models.CharField(max_length=100, verbose_name='제목')
     content = models.TextField(help_text='Markdown 문법을 써주세요.')
     tags = models.CharField(max_length=100, blank=True)
