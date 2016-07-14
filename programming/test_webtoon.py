@@ -21,13 +21,13 @@ def main():
         for a_tag in soup.select('.viewList .title a'):
             title = a_tag.text
             link = urljoin(page_url, a_tag['href'])
-            print(title, link)
-            try:
-                Episode.objects.get(url=link)
-                print('End')
+
+            if Episode.objects.filter(url=link).exists():
+                print('End!')
                 return
-            except Episode.DoesNotExist:
-                Episode.objects.create(title=title, url=link)
+
+            print(title, link)
+            Episode.objects.create(title=title, url=link)
 
 
 if __name__ == '__main__':
