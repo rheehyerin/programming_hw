@@ -20,6 +20,12 @@ class Post(models.Model):
     test_field = models.IntegerField(default=10)
 
 
+class Comment(models.Model):
+    post = models.ForeignKey(Post)
+    message = models.TextField()
+    author = models.CharField(max_length=20)
+
+
 class Tag(models.Model):
     name = models.CharField(max_length=20)
 
