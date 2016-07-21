@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog import views
+from pockemongo import views as pockemongo_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^pokemon/$', pockemongo_views.pockmon_list),
     url(r'^$', views.post_list),
 ]
