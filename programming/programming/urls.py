@@ -13,13 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from blog import views
 from pockemongo import views as pockemongo_views
+from posting_hw import views as posting_hw_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^pokemon/$', pockemongo_views.pockmon_list),
     url(r'^$', views.post_list),
+    url(r'^comments/new/$', views.comment_new),
+    url(r'', include('posting_hw.urls', namespace='posting')),
+    url(r'', include('poketmon.urls', namespace='poketmon')),
 ]

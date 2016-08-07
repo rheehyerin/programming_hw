@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Location{% endblock %}
+
+{% block content %}
+    {% for location in location_list %}
+        {{ location }} 의 pk 값은 {{ location.id }} 입니다.<br>
+    {% endfor %}
+{% endblock %}
+

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<button type="button"><a href="{% url 'posting:post_list' %}">글 목록으로 가기</a></button>
+<h3> 제목 : {{ post.title }}</h3>
+글쓴이 : {{ post.author }}</br></br>
+내용 : {{ post.content }}</br>
+<br>
+<br>
+<h3> 댓글 </h3>
+
+{% for comment in comments %}
+{{ comment }}</br></br>
+{% endfor %}
+
+
+<form action="{% url "posting:comment_new" post.pk %}" method="post">
+    {% csrf_token %}
+    <table>
+    {{ comment_form.as_table }}
+    </table>
+    <input type="submit">
+</form>
+{% endblock %}

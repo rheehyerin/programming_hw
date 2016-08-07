@@ -2,6 +2,9 @@ import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'programming.settings')
 import django
 django.setup()
+#위의 내용은 파이썬 코드에서 장고 리소스로 접근할 때 사용함.
+#직접 만든 python 파일을 장고 프레임워크 안에서 사용하고자 할 때 사용하는 코드셋.
+
 
 from webtoon.models import Episode
 

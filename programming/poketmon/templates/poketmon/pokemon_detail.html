@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Pokemon_detail{% endblock %}
+
+{% block content %}
+            <h3> 포켓몬 이름 : {{ pokemon_detail.name }} </h3>
+            <h4> 포켓몬 공격 수치 : {{ pokemon_detail.attack }} </h4>
+            <h4> 포켓몬 방어 수치 : {{ pokemon_detail.defense }}</h4>
+            <h4> 포켓몬 타입 : {{ pokemon_detail.ptype }}</h4>
+{% endblock %}

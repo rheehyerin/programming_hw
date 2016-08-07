@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}pokemons{% endblock %}
+
+{% block content %}
+    {% for pokemon in pokemon_list %}
+        <div class="row">
+            <div class="col-md-4">
+                " {{ pokemon }} " 의 pk 값은 {{ pokemon.id }} 입니다
+            </div>
+            <div class="col-md-4">
+                {{ pokemon.name|lower }}
+            </div>
+            <div clalss="col-md-4">
+                {{ pokemon.name|upper }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}trainers{% endblock %}
+
+{% block content %}
+            {% for trainer in trainer_list %}
+                <h3>{{ trainer }} = pk 값 : {{ trainer.id }} </h3>
+            {% endfor %}
+ {% endblock %}

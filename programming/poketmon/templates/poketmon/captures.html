@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{%block title%}captures{% endblock %}
+
+{% block content %}
+    {% for ob in captured_list%}
+        {{ob}}<br>
+    {% endfor %}
+{% endblock %}
