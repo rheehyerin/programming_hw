@@ -43,7 +43,7 @@
 
 <hr>
 by using form fields
-<form action="{% url 'posting:comment_new_ver_2' post.pk %}" method="post">
+<form action="{% url 'posting:comment_new_ver_2' post.pk %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <table>
     {{ comment_form_ver_2.as_table }}
