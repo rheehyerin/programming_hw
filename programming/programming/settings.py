@@ -39,11 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'blog',
-    'pockemongo',
-    'shop',
     'webtoon',
     'posting_hw',
     'poketmon',
+    'bootstrap3',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -130,3 +129,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'programming','static'),
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

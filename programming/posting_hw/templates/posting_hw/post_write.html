@@ -2,7 +2,7 @@
 {% block content %}
 
 <button type="button"><a href="{% url 'posting:post_list' %}">글 목록으로 가기</a></button>
-<form action="" method="post">
+<form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <table>
         {{ post_form.as_table }}
