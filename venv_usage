@@ -1,0 +1,42 @@
+python3 -m venv ./venv/
+
+open .
+
+source ./venv/bin/activate
+
+pip3 freeze
+
+mkdir programming/settings
+
+touch programming/settings/__init__.py
+
+git mv programming/settings.py programming/settings/common.py
+
+
+static file:
+
+원래는 blog/static/blog/m.css
+       shop/staitc/shop/m.css
+
+하지만 배포를 하게 되면
+    static/blog/m.css
+    static/shop/m.css 가 되어야 함.
+
+
+
+ssh -i ~/Downloads/programming-5th.pem
+
+
+
+            4       2       1
+            r       w       x
+    User    r       w       x
+    Grop    r       w       x
+    Other   r       w       x
+
+
+
+
+ssh -i ~/Downloads/pro
+chmod 600 ~/Downloads/pro.pem unbuntu@주소
+ssh -i ~/Downloads/pro.pem unbuntu@주소
