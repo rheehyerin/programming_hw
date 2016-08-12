@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^comments/new/$', views.comment_new),
     url(r'', include('posting_hw.urls', namespace='posting')),
     url(r'', include('poketmon.urls', namespace='poketmon')),
+    url(r'^accounts/', include('accounts.urls')), #account가 auth를 참조할 거기 때문에 namespace를 지정하지 않는다.
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
