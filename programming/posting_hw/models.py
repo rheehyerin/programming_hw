@@ -1,6 +1,6 @@
 import os
 from django.core.files import File
-from programming.settings import MEDIA_ROOT
+# from programming.settings import MEDIA_ROOT  # 장고 내에서 settings 참조는 무조건 from django.conf import settings 를 통해서 해야 !!!
 from django.db import models
 from uuid import uuid4
 from django.utils import timezone

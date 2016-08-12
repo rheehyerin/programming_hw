@@ -129,7 +129,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'programming','static'),
+    # os.path.join(BASE_DIR,'programming','static'),  # 빈 디렉토리가 있으면, collectstatic 명령에서 실패하게 된다.
 ]
 
 MEDIA_URL = '/media/'
